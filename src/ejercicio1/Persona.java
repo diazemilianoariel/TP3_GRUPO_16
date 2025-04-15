@@ -1,6 +1,6 @@
 package ejercicio1;
 
-public class Persona {
+public class Persona  implements Comparable<Persona>{
 	private String apellido;
 	private String nombre;
 	private String dni; 
@@ -9,7 +9,7 @@ public class Persona {
 	public Persona() {
 		
 		
-	}
+	}//
 	
 	public Persona(String apellido,String nombre,String dni) {
 		this.apellido=apellido;
@@ -46,6 +46,12 @@ public class Persona {
 	
 	public String toString() {
 		return "Persona [apellido=" + apellido + ", nombre=" + nombre + ", dni=" + dni + "]";
+	}
+
+	
+	public int compareTo(Persona o) {
+		
+		return 0;
 	}
 
 }
