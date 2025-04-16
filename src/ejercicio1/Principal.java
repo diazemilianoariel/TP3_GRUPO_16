@@ -54,8 +54,12 @@ public class Principal {
 			System.out.println("No se encontro el archivo");
 		}
 		
+		Archivo nuevoArchivo = new Archivo("Resultado.txt");
+		nuevoArchivo.creaArchivo();
+		
 		for (Persona persona : listaNoDuplicados) {
 			System.out.println(persona.getNombre() + " " + persona.getApellido() + " " + persona.getDni());
+			nuevoArchivo.escribe_letra_x_letra(persona.getNombre() + " " + persona.getApellido() + " " + persona.getDni() + "\n");
 		}
 	}
 }

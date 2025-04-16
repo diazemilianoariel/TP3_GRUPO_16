@@ -12,6 +12,14 @@ public class Archivo {
 		//Si en ruta recibe una ruta absoluta, entonces lo crea en esa ruta
 		
 		private String ruta;
+		
+		public Archivo() {
+			ruta="";
+		}
+		
+		public Archivo(String nombre) {
+			ruta=nombre;
+		}
 
 		public boolean existe()
 		{
@@ -25,7 +33,7 @@ public class Archivo {
 		{
 			FileWriter escritura;
 			try {
-				escritura = new FileWriter(ruta, true);
+				escritura = new FileWriter(ruta, false);
 				escritura.write("");
 				escritura.close();
 				return true;
