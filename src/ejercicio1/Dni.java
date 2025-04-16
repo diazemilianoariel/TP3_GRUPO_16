@@ -5,12 +5,12 @@ public class Dni {
 	{
 	}
 
-	public static void verificarDniInvalido(String dni) throws DniInvalido {
-		try {
-			Integer.parseInt(dni);
+	public static boolean verificarDniInvalido(String dni) throws DniInvalido {
+		if(dni.matches("\\d+")) {
+			return true;
 		}
-		catch(NumberFormatException e){
-			throw new DniInvalido();
+		else {
+			return false; 
 		}
 	}
 
